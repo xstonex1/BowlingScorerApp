@@ -43,54 +43,72 @@ namespace BowlingScorer.ConsoleApp
                     new FrameRolls
                     {
                         FrameNumber = 1,
-                        Roll1Score = 10
+                        Roll1Score = 4,
+                        Roll2Score = 3,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 2,
-                        Roll1Score = 10
+                        Roll1Score = 7,
+                        Roll2Score = 3,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 3,
-                        Roll1Score = 10
+                        Roll1Score = 5,
+                        Roll2Score = 2,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 4,
-                        Roll1Score = 10
+                        Roll1Score = 8,
+                        Roll2Score = 1,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 5,
-                        Roll1Score = 10
+                        Roll1Score = 4,
+                        Roll2Score = 6,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 6,
-                        Roll1Score = 10
+                        Roll1Score = 2,
+                        Roll2Score = 4,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 7,
-                        Roll1Score = 10
+                        Roll1Score = 8,
+                        Roll2Score = 0,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 8,
-                        Roll1Score = 10
+                        Roll1Score = 8,
+                        Roll2Score = 0,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 9,
-                        Roll1Score = 10
+                        Roll1Score = 8,
+                        Roll2Score = 2,
+                        Roll3Score = 0
                     },
                     new FrameRolls
                     {
                         FrameNumber = 10,
                         Roll1Score = 10,
-                        Roll2Score = 10,
-                        Roll3Score = 10
+                        Roll2Score = 1,
+                        Roll3Score = 7
                     }
                 }
             };
