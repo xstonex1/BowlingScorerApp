@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace BowlingScorer.Domain.Shared.CustomExceptions
 {
     [Serializable]
-    internal class ValidationException : Exception
+    public class ValidationException : Exception
     {
         public ValidationException()
         {

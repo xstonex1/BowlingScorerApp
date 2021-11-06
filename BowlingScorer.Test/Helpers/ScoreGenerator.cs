@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BowlingScorerApp
+namespace BowlingScorer.Test.Helpers
 {
     public class ScoreGenerator
     {
@@ -15,6 +15,21 @@ namespace BowlingScorerApp
             List<FrameRolls> frameScoresList = new List<FrameRolls>();
 
             for (int i=1; i<11; i++)
+            {
+                frameScoresList.Add(GenerateRandomFrameScores(i));
+            }
+
+            return new BowlingFrameRollsDto
+            {
+                Scores = frameScoresList
+            };
+        }
+
+        public static BowlingFrameRollsDto GenerateRandomScores(int numberOfFrames)
+        {
+            List<FrameRolls> frameScoresList = new List<FrameRolls>();
+
+            for (int i = 1; i < numberOfFrames + 1; i++)
             {
                 frameScoresList.Add(GenerateRandomFrameScores(i));
             }

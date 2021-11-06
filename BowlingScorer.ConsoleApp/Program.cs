@@ -1,11 +1,12 @@
 ﻿using BowlingScorer.Domain;
 using BowlingScorer.Domain.Domain;
 using BowlingScorer.Domain.DTO;
+using BowlingScorer.Test.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BowlingScorerApp
+namespace BowlingScorer.ConsoleApp
 {
     public class Program
     {

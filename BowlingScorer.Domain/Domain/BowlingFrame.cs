@@ -12,22 +12,17 @@ namespace BowlingScorer.Domain.Domain
         public int Roll1Score { get; private set; }
         public int Roll2Score { get; private set; }
         public int Roll3Score { get; private set; }
-        public bool IsSpare { get; private set; } = false;
-        public bool IsStrike { get; private set; } = false;
+        public int FollowUpRollScore { get; private set; }
+        public int SecondFollowUpRollScore { get; private set; }
         public int FrameScore { get; private set; }
 
-        /// <summary>
-        /// Made accessibe for unit testing purposes
-        /// </summary>
-        public int FollowUpRollScore { get; private set; }
-        /// <summary>
-        /// Made accessibe for unit testing purposes
-        /// </summary>
-        public int SecondFollowUpRollScore { get; private set; }
+        private bool isSpare { get; set; } = false;
+        private bool isStrike { get; set; } = false;
+        private bool hasScoreBeenCalculated { get; set; } = false;
 
         public BowlingFrame(FrameRolls frameInfo, int followUpRollScore, int secondFollowUpRollScore)
         {
-            if (frameInfo == null) throw new ArgumentNullException("frameInfo parameter cannot be null");
+            if (frameInfo == null) throw new ArgumentNullException("frameInfo");
             ValidateInputParameters(frameInfo, followUpRollScore, secondFollowUpRollScore);
 
             FrameNumber = frameInfo.FrameNumber;
@@ -36,8 +31,6 @@ namespace BowlingScorer.Domain.Domain
             Roll3Score = frameInfo.Roll3Score;
             FollowUpRollScore = followUpRollScore;
             SecondFollowUpRollScore = secondFollowUpRollScore;
-
-            AnalyzeFrameResults(followUpRollScore, secondFollowUpRollScore);
         }
 
         private void ValidateInputParameters(FrameRolls frameInfo, int followUpRollScore, int secondFollowUpRollScore)
@@ -64,19 +57,25 @@ namespace BowlingScorer.Domain.Domain
                 throw new ValidationException("Frame 10: A player cannot roll a third time if they did not bowl a strike or spare within that frame");
         }
 
-        private void AnalyzeFrameResults(int followUpRollScore, int secondFollowUpRollScore)
+        public int CalculateFrameScore()
         {
-            if (FrameNumber != 10)
+            if (!hasScoreBeenCalculated)
             {
-                if (Roll1Score == 10)
-                    IsStrike = true;
-                else if (Roll1Score + Roll2Score == 10)
-                    IsSpare = true;
+                if (FrameNumber != 10)
+                {
+                    if (Roll1Score == 10)
+                        isStrike = true;
+                    else if (Roll1Score + Roll2Score == 10)
+                        isSpare = true;
+                }
+
+                FrameScore = isStrike ? Roll1Score + FollowUpRollScore + SecondFollowUpRollScore :
+                    isSpare ? Roll1Score + Roll2Score + FollowUpRollScore :
+                    Roll1Score + Roll2Score + Roll3Score;
+                hasScoreBeenCalculated = true;
             }
 
-            FrameScore = IsStrike ? Roll1Score + followUpRollScore + secondFollowUpRollScore :
-                IsSpare ? Roll1Score + Roll2Score + followUpRollScore :
-                Roll1Score + Roll2Score + Roll3Score;
+            return FrameScore;
         }
     }
 }

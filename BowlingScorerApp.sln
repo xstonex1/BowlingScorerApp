@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScorerApp", "BowlingScorerApp\BowlingScorerApp.csproj", "{BA20A5F0-1101-4EE1-BE83-9E62D0863208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BowlingScorer.Domain", "BowlingScorer.Domain\BowlingScorer.Domain.csproj", "{9915E7F3-6CF3-45AE-8DBD-60C42D61C230}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScorer.Domain", "BowlingScorer.Domain\BowlingScorer.Domain.csproj", "{9915E7F3-6CF3-45AE-8DBD-60C42D61C230}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScorer.Test", "BowlingScorer.Test\BowlingScorer.Test.csproj", "{B84DCF8B-1B51-4066-85A2-FAF18677E158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScorer.ConsoleApp", "BowlingScorer.ConsoleApp\BowlingScorer.ConsoleApp.csproj", "{907BD435-D8DB-4228-AF2C-F11644BE8C28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BA20A5F0-1101-4EE1-BE83-9E62D0863208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA20A5F0-1101-4EE1-BE83-9E62D0863208}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA20A5F0-1101-4EE1-BE83-9E62D0863208}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA20A5F0-1101-4EE1-BE83-9E62D0863208}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9915E7F3-6CF3-45AE-8DBD-60C42D61C230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9915E7F3-6CF3-45AE-8DBD-60C42D61C230}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9915E7F3-6CF3-45AE-8DBD-60C42D61C230}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9915E7F3-6CF3-45AE-8DBD-60C42D61C230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84DCF8B-1B51-4066-85A2-FAF18677E158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84DCF8B-1B51-4066-85A2-FAF18677E158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84DCF8B-1B51-4066-85A2-FAF18677E158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84DCF8B-1B51-4066-85A2-FAF18677E158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{907BD435-D8DB-4228-AF2C-F11644BE8C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907BD435-D8DB-4228-AF2C-F11644BE8C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907BD435-D8DB-4228-AF2C-F11644BE8C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907BD435-D8DB-4228-AF2C-F11644BE8C28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
