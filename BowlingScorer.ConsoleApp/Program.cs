@@ -35,86 +35,61 @@ namespace BowlingScorer.ConsoleApp
         {
             BowlingFrameRollsDto randomScoresDto = ScoreGenerator.GenerateRandomScoresForAGame();
 
-            #region Custom
-            BowlingFrameRollsDto customScoresDto = new BowlingFrameRollsDto
+            #region Custom Pre-Built Dto Options
+            BowlingFrameRollsDto requirementsExampleScoresDto = new BowlingFrameRollsDto
             {
-                Scores = new System.Collections.Generic.List<FrameRolls>
+                Scores = new List<FrameRolls>
                 {
-                    new FrameRolls
-                    {
-                        FrameNumber = 1,
-                        Roll1Score = 4,
-                        Roll2Score = 3,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 2,
-                        Roll1Score = 7,
-                        Roll2Score = 3,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 3,
-                        Roll1Score = 5,
-                        Roll2Score = 2,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 4,
-                        Roll1Score = 8,
-                        Roll2Score = 1,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 5,
-                        Roll1Score = 4,
-                        Roll2Score = 6,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 6,
-                        Roll1Score = 2,
-                        Roll2Score = 4,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 7,
-                        Roll1Score = 8,
-                        Roll2Score = 0,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 8,
-                        Roll1Score = 8,
-                        Roll2Score = 0,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 9,
-                        Roll1Score = 8,
-                        Roll2Score = 2,
-                        Roll3Score = 0
-                    },
-                    new FrameRolls
-                    {
-                        FrameNumber = 10,
-                        Roll1Score = 10,
-                        Roll2Score = 1,
-                        Roll3Score = 7
-                    }
+                    new FrameRolls { FrameNumber = 1, Roll1Score = 4, Roll2Score = 3, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 2, Roll1Score = 7, Roll2Score = 3, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 3, Roll1Score = 5, Roll2Score = 2, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 4, Roll1Score = 8, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 5, Roll1Score = 4, Roll2Score = 6, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 6, Roll1Score = 2, Roll2Score = 4, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 7, Roll1Score = 8, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 8, Roll1Score = 8, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 9, Roll1Score = 8, Roll2Score = 2, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 10, Roll1Score = 10, Roll2Score = 1, Roll3Score = 7 },
+                }
+            };
+
+            BowlingFrameRollsDto perfectGameDto = new BowlingFrameRollsDto
+            {
+                Scores = new List<FrameRolls>
+                {
+                    new FrameRolls { FrameNumber = 1, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 2, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 3, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 4, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 5, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 6, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 7, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 8, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 9, Roll1Score = 10, Roll2Score = 0, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 10, Roll1Score = 10, Roll2Score = 10, Roll3Score = 10 },
+                }
+            };
+
+            BowlingFrameRollsDto gamesOfSparesDto = new BowlingFrameRollsDto
+            {
+                Scores = new List<FrameRolls>
+                {
+                    new FrameRolls { FrameNumber = 1, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 2, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 3, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 4, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 5, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 6, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 7, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 8, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 9, Roll1Score = 9, Roll2Score = 1, Roll3Score = 0 },
+                    new FrameRolls { FrameNumber = 10, Roll1Score = 9, Roll2Score = 1, Roll3Score = 10 },
                 }
             };
 
             #endregion
 
+            // easily change the dto object passed into the scoring service (random or a custom-built one) by reassigning the value to this variable
             var useTheseRolls = randomScoresDto;
 
             //calculate all results
