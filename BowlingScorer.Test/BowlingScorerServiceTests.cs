@@ -13,8 +13,6 @@ namespace BowlingScorer.Test
     [TestFixture, Category("Unit")]
     public class BowlingScorerServiceTests
     {
-        private static readonly Random _rand = new Random();
-
         [Test]
         public void BowlingScorerService_CalculateScoresForEachFrameOfBowlingGame_ThrowsValidationException_IfDtoFramesCountExceedsMaxAllowed()
         {
@@ -173,23 +171,6 @@ namespace BowlingScorer.Test
             Assert.AreEqual(0, finalGameResults.Frame9Score);
             Assert.AreEqual(0, finalGameResults.Frame10Score);
             Assert.AreEqual(f1Score, finalGameResults.GameFinalScore);
-        }
-
-        private List<FrameRolls> GenerateListOfRandomFrameRolls(int numberToGenerate)
-        {
-            List<FrameRolls> data = new List<FrameRolls>();
-            for (int i = 0; i < numberToGenerate; i++)
-            {
-                data.Add(new FrameRolls
-                {
-                    FrameNumber = _rand.Next(1, 11),
-                    Roll1Score = _rand.Next(1, 11),
-                    Roll2Score = _rand.Next(1, 11),
-                    Roll3Score = _rand.Next(1, 11)
-                });
-            }
-
-            return data;
         }
     }
 }
