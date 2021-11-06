@@ -80,6 +80,7 @@ namespace BowlingScorer.Test
 
             // assert
             Assert.AreEqual(3, frameResults.Count);
+            Assert.AreEqual(6, frameResults.FirstOrDefault(a => a.FrameNumber == 1).FrameScore);
             Assert.AreEqual(4, frameResults.FirstOrDefault(a => a.FrameNumber == 1).FollowUpRollScore);
             Assert.AreEqual(5, frameResults.FirstOrDefault(a => a.FrameNumber == 1).SecondFollowUpRollScore);
         }
@@ -105,6 +106,7 @@ namespace BowlingScorer.Test
 
             // assert
             Assert.AreEqual(3, frameResults.Count);
+            Assert.AreEqual(29, frameResults.FirstOrDefault(a => a.FrameNumber == 1).FrameScore);
             Assert.AreEqual(10, frameResults.FirstOrDefault(a => a.FrameNumber == 1).FollowUpRollScore);
             Assert.AreEqual(9, frameResults.FirstOrDefault(a => a.FrameNumber == 1).SecondFollowUpRollScore);
         }
